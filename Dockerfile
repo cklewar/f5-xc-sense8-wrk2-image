@@ -7,6 +7,6 @@ RUN apk add --no-cache \
     gcc musl-dev libffi-dev alpine-sdk openssl-dev make git
 RUN git clone https://github.com/giltene/wrk2 wrk2
 RUN cd wrk2
-RUN sudo make
-RUN sudo cp wrk /usr/local/bin
+RUN make
+RUN cp wrk /usr/local/bin
 ENTRYPOINT ["wrk2"]
